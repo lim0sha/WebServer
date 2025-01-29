@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+<body class="gradient-background">
+<div class="background">
+    <div class="container">
+        <h1>Welcome to the lim0sha's WebServer 😄</h1>
+        <p>Status: <span id="status">Checking...</span></p>
+        <div class="button-group">
+            <a href="/login" class="button">Login</a>
+            <a href="/logout" class="button">Logout</a>
+            <a href="/register" class="button">Register</a>
+        </div>
+    </div>
+</div>
+<script>
+    fetch("/log")
+        .then(response => response.json())
+        .then(data => {
+            const statusElement = document.getElementById("status");
+            if (data.loggedIn && data.username) {
+                statusElement.textContent = `Logged in as ${data.username}`;
+            } else {
+                statusElement.textContent = "Logged out";
+            }
+        })
+        .catch(error => {
+            document.getElementById("status").textContent = "Error checking status";
+            console.error("There was a problem with the fetch operation:", error);
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFD6FF, #E7C6FF, #C8B6FF, #B8C0FF, #BBD0FF);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1em;
+    box-shadow: 20px 20px 60px rgba(217, 217, 217, 0.5), -20px -20px 60px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px rgba(197, 197, 197, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background: #d0d0d0;
+}
+
+.button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px rgba(197, 197, 197, 0.5), inset -4px -4px 12px rgba(255, 255, 255, 0.5);
+}
+
+input {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
